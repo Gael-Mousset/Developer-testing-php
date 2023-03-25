@@ -1,0 +1,43 @@
+.house {
+    display: inline-block;
+    margin: 5px;
+    background-color: gray;
+}
+
+.house:hover {
+    opacity: 0.5;
+}
+
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
+
+form {
+    margin: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 200px;
+}
+
+input[type=number] {
+    width: 50px;
+}
+
+button {
+    margin: 20px;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgray;
+}
