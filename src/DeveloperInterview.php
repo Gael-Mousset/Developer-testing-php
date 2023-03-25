@@ -20,7 +20,17 @@ class DeveloperInterview
     {
         $fizzBuzz = '';
 
-        // Write your code!
+        for ($i = 1; $i <= 100; $i++) {
+            if ($i % 3 == 0 && $i % 5 == 0) {
+                $fizzBuzz .= 'FizzBuzz';
+            } elseif ($i % 3 == 0) {
+                $fizzBuzz .= 'Fizz';
+            } elseif ($i % 5 == 0) {
+                $fizzBuzz .= 'Buzz';
+            } else {
+                $fizzBuzz .= $i;
+            }
+        }
 
         return $fizzBuzz;
     }
@@ -47,8 +57,28 @@ class DeveloperInterview
     public static function parseToRoman(int $value): string
     {
         $roman = '';
-
-        // Write your code!
+        
+        $numeraux = array(
+            'M' => 1000,
+            'CM' => 900,
+            'D' => 500,
+            'CD' => 400,
+            'C' => 100,
+            'XC' => 90,
+            'L' => 50,
+            'XL' => 40,
+            'X' => 10,
+            'IX' => 9,
+            'V' => 5,
+            'IV' => 4,
+            'I' => 1
+        );
+        foreach($numeraux as $numero => $decimal ){
+            while($value >= $decimal){
+                $roman .= $numero;
+                $value -= $decimal;
+            }
+        }
 
         return $roman;
     }
@@ -69,11 +99,7 @@ class DeveloperInterview
      */
     public static function toRot13(string $value): string
     {
-        $rot13 = '';
-
-        // Write your code!
-
-        return $rot13;
+        return str_rot13($value);
     }
 
     /**
@@ -87,7 +113,9 @@ class DeveloperInterview
         $text = 'Rapport n°2187 (09/2019) - Achats';
         $year = '';
 
-        // Write your code!
+        preg_match('/\/(\d{4})/', $text, $matches);
+        
+        $year = $matches[1];
 
         return $year;
     }
@@ -103,9 +131,7 @@ class DeveloperInterview
      */
     public function simplifyMe($report, $rc)
     {
-        if ($report === '' && $rc === 1) {
-            // pass
-        } else {
+        if ($report !== '' || $rc !== 1) {
             $this->doSomething();
         }
     }
@@ -121,7 +147,11 @@ class DeveloperInterview
     {
         $factorial = 0;
 
-        // Write your code!
+        if($number <= 1){
+            return 1;
+        }else{
+            $factorial = $number * self::factorial($number - 1);
+        }
 
         return $factorial;
     }
@@ -136,10 +166,12 @@ class DeveloperInterview
      */
     public static function clockAngle(int $hours, int $minutes): int
     {
-        $angle = 0;
-
-        // Write your code!
-
-        return $angle;
+        $hour_angle = 0.5 * (60 * $hours + $minutes); 
+        $minute_angle = 6 * $minutes; 
+    
+        $angle = abs($hour_angle - $minute_angle);
+    
+        return (int)$angle;
     }
+    
 }

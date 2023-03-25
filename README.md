@@ -29,7 +29,7 @@ composer config --global --unset github-oauth.github.com
 Écrivez vos fonctions dans `src/DeveloperInterview.php`, puis lancez les tests:
 
 ```sh
-./vendor/bin/phpunit --testdox --bootstrap vendor/autoload.php tests
+./vendor/bin/phpunit --testdox --bootstrap vendor/autoload.php tests --colors
 ```
 
 ### Exercices
