@@ -39,5 +39,7 @@ Pas de probleme dans l'ensamble la plus par des question je les est déjà fait 
 
 Cette partie ce trouve dans le repertoire `maison`.
 
-Pas de proble manque de temps pour la partie BD
+Url d'accès : "http://localhost:8887" 
+
+Manque de temps pour la partie BD.
 
