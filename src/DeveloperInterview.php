@@ -84,18 +84,18 @@ class DeveloperInterview
     }
 
     /**
-     * ROT-13 is the encrypting of a message by exchanging each of the
-     * letters on the first half of the alphabet with the corresponding
-     * letter in the second half of the alphabet (that is, swapping
-     * positions by 13 characters). Thus, A becomes N, B becomes O,
-     * and so forth, and conversely, N becomes A, O becomes B, and so
-     * forth. Numbers, spaces and punctuation are not changed.
+     * ROT-13 est le cryptage d'un message en échangeant chacun des
+     * lettres sur la première moitié de l'alphabet avec le correspondant
+     * lettre dans la seconde moitié de l'alphabet (c'est-à-dire en échangeant
+     * positions par 13 caractères). Ainsi, A devient N, B devient O,
+     * et ainsi de suite, et inversement, N devient A, O devient B, et ainsi
+     * suite. Les chiffres, les espaces et la ponctuation ne sont pas modifiés.
      *
-     * Using the native `str_rot13` is forbiden, make your own implementation!
+     * L'utilisation du `str_rot13` natif est interdite, faites votre propre implémentation !
      *
-     * @param string $value The string to decode
+     * @param string $value Le string à décodé
      *
-     * @return string The decoded string
+     * @return string Le string décodé
      */
     public static function toRot13(string $value): string
     {
