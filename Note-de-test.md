@@ -30,3 +30,12 @@ Puis lancez les tests:
 ./vendor/bin/phpunit --testdox --bootstrap vendor/autoload.php tests --colors
 ```
 
+
+### Partie 1
+
+Pas de probleme dans l'ensamble la plus par des question je les est déjà fait en C++ ou JS  lors de ma formation.
+
+### Partie 2
+
+Pas de proble manque de temps pour la partie BD
+
