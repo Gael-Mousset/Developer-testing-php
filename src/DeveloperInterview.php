@@ -5,14 +5,14 @@ declare(strict_types=1);
 class DeveloperInterview
 {
     /**
-     * Write a short program that concats each number from 1 to 100.
+     * Écrivez un programme court qui concatène chaque nombre de 1 à 100.
      *
-     * For each multiple of 3, concat "Fizz" instead of the number.
+     * Pour chaque multiple de 3, concaténer "Fizz" à la place du nombre.
      *
-     * For each multiple of 5, concat "Buzz" instead of the number.
+     * Pour chaque multiple de 5, concaté "Buzz" au lieu du nombre.
      *
-     * For numbers which are multiples of both 3 and 5, concat "FizzBuzz"
-     * instead of the number.
+     * Pour les nombres multiples de 3 et de 5, concaténer "FizzBuzz" 
+     * au lieu du nombre.
      *
      * @return string
      */
@@ -36,9 +36,9 @@ class DeveloperInterview
     }
 
     /**
-     * For a given number, will return its value in Roman numerals.
+     * Pour un nombre donné, renverra sa valeur en chiffres romains.
      *
-     * Roman Numerals Chart
+     * Tableau des chiffres romains
      *
      * Roman Numeral | Number Value | Use As Inputs
      * --------------|--------------|---------------
@@ -99,12 +99,23 @@ class DeveloperInterview
      */
     public static function toRot13(string $value): string
     {
-        return str_rot13($value);
+        $rot13 = '';
+        $length = strlen($value);
+        for ($i = 0; $i < $length; $i++) {
+            $char = $value[$i];
+            if ($char >= 'A' && $char <= 'Z') {
+                $rot13 .= chr((ord($char) - 65 + 13) % 26 + 65);
+            } elseif ($char >= 'a' && $char <= 'z') {
+                $rot13 .= chr((ord($char) - 97 + 13) % 26 + 97);
+            } else {
+                $rot13 .= $char;
+            }
+        }
+        return $rot13;
     }
 
     /**
-     * Write a regular expression that extracts the year from the $text
-     * variable
+     * Ecrire une expression régulière qui extrait l'année de la variable $text
      *
      * @return string the year
      */
@@ -120,15 +131,18 @@ class DeveloperInterview
         return $year;
     }
 
+
+    /**
+     * Pouvez-vous l'améliorer ?
+     * simplifyMe() et doSomething son ensemble 
+     *
+     * @return boolean
+     */
+
     public function doSomething()
     {
     }
 
-    /**
-     * Ouch, this code is ugly. Can you improve it?
-     *
-     * @return boolean
-     */
     public function simplifyMe($report, $rc)
     {
         if ($report !== '' || $rc !== 1) {
@@ -137,7 +151,7 @@ class DeveloperInterview
     }
 
     /**
-     * Get the factorial of a number
+     * Obtenir la factorielle d'un nombre
      *
      * @param int $number
      *
@@ -157,7 +171,7 @@ class DeveloperInterview
     }
 
     /**
-     * Get the angle formed by the hours and the minutes hands
+     * Obtenir l'angle formé par les aiguilles des heures et des minutes
      *
      * @param int $hours
      * @param int $minutes
@@ -166,6 +180,7 @@ class DeveloperInterview
      */
     public static function clockAngle(int $hours, int $minutes): int
     {
+        $angle = 0;
         $hourAngle = 0.5 * (60 * $hours + $minutes); 
         $minuteAngle = 6 * $minutes; 
     
