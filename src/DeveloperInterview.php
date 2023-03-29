@@ -166,10 +166,10 @@ class DeveloperInterview
      */
     public static function clockAngle(int $hours, int $minutes): int
     {
-        $hour_angle = 0.5 * (60 * $hours + $minutes); 
-        $minute_angle = 6 * $minutes; 
+        $hourAngle = 0.5 * (60 * $hours + $minutes); 
+        $minuteAngle = 6 * $minutes; 
     
-        $angle = abs($hour_angle - $minute_angle);
+        $angle = abs($hourAngle - $minuteAngle);
     
         return (int)$angle;
     }
