@@ -2,9 +2,9 @@
 
 ### Docker
 
-- Utilisation de docker pour lancer un conteneure php pour lance les test
-- Utilisation de docker pour d'un conteneur web pour la mise en place de de la partie 2
-- Lancement d'un conteneur de base de donée mySql pour la partie 2
+- Utilisation de docker pour lancer un conteneur php pour lance les tests
+- Utilisation de docker pour d'un conteneur web pour la mise en place de la partie 2
+- Lancement d'un conteneur de base de données mySql pour la partie 2
 
 #### Lancer docker 
 
@@ -33,11 +33,11 @@ Puis lancez les tests:
 
 ### Partie 1
 
-Pas de probleme dans l'ensamble la plus par des question je les est déjà fait en C++ ou JS lors de ma formation.
+Pas de problème dans l'ensemble la plupart des questions je les ai déjà faits en C++ ou JS lors de ma formation.
 
 ### Partie 2
 
-Cette partie ce trouve dans le repertoire `maison`.
+Cette partie se trouve dans le répertoire `maison`.
 
 Url d'accès : "http://localhost:8887" 
 
